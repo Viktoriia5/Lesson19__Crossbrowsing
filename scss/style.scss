@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@font-face {
+  font-family: "Bebas Neue Bold";
+  src: url("../fonts/bebas_neue/bebasneue_bold-webfont.eot");
+  src: url("../fonts/bebas_neue/bebasneue_bold-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/bebas_neue/bebasneue_bold-webfont.woff2") format("woff2"),
+    url("../fonts/bebas_neue/bebasneue_bold-webfont.woff") format("woff"),
+    url("../fonts/bebas_neue/bebasneue_bold-webfont.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Bebas Neue Light";
+  src: url("../fonts/bebas_neue/bebasneue_light-webfont.eot");
+  src: url("../fonts/bebas_neue/bebasneue_light-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/bebas_neue/bebasneue_light-webfont.woff2") format("woff2"),
+    url("../fonts/bebas_neue/bebasneue_light-webfont.woff") format("woff"),
+    url("../fonts/bebas_neue/bebasneue_light-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Bebas Neue Regular";
+  src: url("../fonts/bebas_neue/bebasneue_regular-webfont.woff");
+  src: url("../fonts/bebas_neue/bebasneue_regular-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/bebas_neue/bebasneue_regular-webfont.woff2") format("woff2"),
+    url("../fonts/bebas_neue/bebasneue_regular-webfont.woff") format("woff"),
+    url("../fonts/bebas_neue/bebasneue_regular-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Bebas Neue - Thin";
+  src: url("../fonts/bebas_neue/bebasneue_thin-webfont.eot");
+  src: url("../fonts/bebas_neue/bebasneue_thin-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/bebas_neue/bebasneue_thin-webfont.woff2") format("woff2"),
+    url("../fonts/bebas_neue/bebasneue_thin-webfont.woff") format("woff"),
+    url("../fonts/bebas_neue/bebasneue_thin-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@import "../node_modules/normalize-scss/sass/normalize/import-now";
+@import "_var.scss";
+@import "_mixins.scss";
+
+* {
+  box-sizing: border-box;
+  transition: all 0.3s ease-out;
+}
+main {
+  background-color: #9284f6;
+
+  .ba-pricing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 80%;
+    max-width: 1068px;
+    margin: 0 auto;
+    padding: 5% 0;
+    @media (max-width: 788px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      max-width: 1068px;
+      margin: 0 auto;
+    }
+    .ba-pricing__col {
+      max-width: 327px;
+      width: 40%;
+      @media (max-width: 788px) {
+        max-width: 327px;
+        width: 100%;
+      }
+
+      .ba-price {
+        padding-top: 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #f5f4f9;
+        position: relative;
+
+        &__col--red {
+          display: flex;
+          flex-direction: column;
+
+          align-items: flex-end;
+          z-index: 300;
+          position: absolute;
+          top: 2%;
+          right: 2%;
+          .col__small {
+            background-color: #fd8d7b;
+            border-radius: 50%;
+            width: 8px;
+            height: 8px;
+            z-index: 200;
+          }
+          .col__big {
+            background-color: #fd8d7b;
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+            z-index: 200;
+            margin-right: 20%;
+          }
+          .col__bigger {
+            background-color: #fd8d7b;
+            border-radius: 50%;
+            width: 46px;
+            height: 46px;
+            z-index: 500;
+            margin-right: 45%;
+            color: #ffffff;
+            font-family: "Bebas Neue Regular";
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 46px;
+            text-align: center;
+            vertical-align: middle;
+            text-transform: uppercase;
+            position: relative;
+
+            img {
+              position: absolute;
+              top: 10px;
+              right: -110px;
+            }
+            span {
+              position: absolute;
+              top: 17px;
+              right: -87px;
+              font-family: "Bebas Neue Regular";
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 16px;
+              text-align: left;
+              text-transform: uppercase;
+              letter-spacing: 1.28px;
+            }
+          }
+        }
+
+        .price {
+          display: flex;
+          color: #181818;
+
+          &__dollar {
+            font-family: "Bebas Neue - Thin";
+            font-size: 24px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 1.92px;
+            align-self: flex-start;
+            justify-self: flex-start;
+            padding-top: 12%;
+          }
+          &__rate {
+            font-family: "Bebas Neue - Thin";
+            font-size: 60px;
+            font-weight: 400;
+            text-transform: uppercase;
+            margin-bottom: 0;
+            padding-bottom: 0;
+          }
+          &__hr {
+            font-family: "Bebas Neue Light";
+            font-size: 16px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 1.28px;
+            align-self: flex-end;
+            padding-bottom: 12%;
+          }
+        }
+        &__position {
+          font-family: "Bebas Neue Regular";
+          font-size: 24px;
+          font-weight: 400;
+          line-height: 36px;
+          text-align: left;
+          text-transform: uppercase;
+          letter-spacing: 1.92px;
+        }
+
+        &__body {
+          /*background:url("../images/Curv-shape.png") no-repeat center;
+             background-size: contain;*/
+          background-color: #ffffff;
+          border-top-left-radius: 50%;
+          border-top-right-radius: 50%;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+
+          .body__icon {
+            color: #181818;
+            font-family: themify;
+            font-size: 36px;
+            font-weight: 400;
+            line-height: 36px;
+            letter-spacing: 2.88px;
+            padding: 10% 0;
+          }
+          ul {
+            list-style: none;
+            margin: 0 auto;
+            color: #181818;
+            font-family: Roboto;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 53px;
+          }
+        }
+        .ba-button {
+          width: 203px;
+          height: 54px;
+          box-shadow: 2px 4px 18px rgba(133, 192, 247, 0.31);
+          border-radius: 27px;
+          background-color: #6fcffb;
+          color: #ffffff;
+          font-family: "Bebas Neue Bold";
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 53px;
+          letter-spacing: 1.44px;
+          text-decoration: none;
+          text-align: center;
+          margin-bottom: -27px;
+          margin-top: 10%;
+        }
+        .hidden {
+          display: none;
+          color: #a9a9a9;
+          font-family: Roboto;
+          font-size: 11px;
+          font-weight: 300;
+        }
+      }
+    }
+    .ba-pricing__col:hover {
+      max-width: 370px;
+      width: 45%;
+      height: 691px;
+      @media (max-width: 788px) {
+        width: 100%;
+      }
+
+      .pink__btn {
+        background-color: #fd8d7b;
+        box-shadow: 2px 4px 18px rgba(253, 141, 123, 0.31);
+        margin-bottom: 7px;
+        position: relative;
+      }
+      .hidden {
+        display: block;
+        padding-bottom: 7px;
+      }
+    }
+  }
+}
